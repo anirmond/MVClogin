@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Please Login</h2>
+<div>
+    @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+   <table>
+       <tr>
+           <td>
+               @Html.Label("Username")
+           </td>
+           <td>
+               @Html.TextBox("txtUsername")
+           </td>
+           <td>
+               @ViewData["username"]
+           </td>
+
+       </tr>
+       <tr>
+           <td>
+               @Html.Label("Password")
+           </td>
+           <td>
+               @Html.Password("txtPassword")
+           </td>
+           <td>
+               @ViewData["password"]
+           </td>
+       </tr>
+       <tr>
+           <td>
+               <input type ="submit" value ="Submit"/>
+           </td>
+           <td>
+              @Html.ActionLink("Registe New User","Register","Register")
+           </td>
+       </tr>
+   </table>
+    }
+</div>
+
+

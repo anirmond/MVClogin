@@ -1,0 +1,105 @@
+﻿@model Model.RegisterUser
+
+@{
+    ViewBag.Title = "Register";
+}
+<head>
+        @*<script src="~/Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+        <script src="~/Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+        <script src="~/Scripts/customjs/custom.js" type="text/javascript"></script>*@
+    </head>
+<html>
+<body>
+    <h2>Register</h2>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+
+                    <td>
+                        @Html.Label("FirstName")
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.FirstNAme,null, new { @class = "mandate" })
+
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(m => m.FirstNAme)
+                    </td>
+
+
+                </tr>
+                <tr>
+
+                    <td>
+                        @Html.Label("Lastname")
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.LastName)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(m => m.LastName)
+                    </td>
+
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        @Html.Label("Username")
+                    </td>
+                    <td >
+                        @Html.TextBoxFor(m => m.UserName)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(m => m.UserName)
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Password")
+                    </td>
+                    <td >
+                        @Html.PasswordFor(m => m.Password)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(m => m.Password)
+
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Confirm Password")
+                    </td>
+                    <td >
+                        @Html.PasswordFor(m => m.ConfirmPassword)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(m => m.ConfirmPassword)
+
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Submit" class="register" />
+                    </td>
+                </tr>
+            </table>
+
+
+        }
+
+    </div>
+</body>
+</html>
+
+  
+

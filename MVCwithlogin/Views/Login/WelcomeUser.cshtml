@@ -1,0 +1,53 @@
+﻿@model Model.LoggedInUser
+
+@{
+    ViewBag.Title = "WelcomeUser";
+
+}
+
+<h2>Welcome @Model.FirstNAme @Model.LastName</h2>
+<h3>Basic Account Details</h3>
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+   <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Editable</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>UserName</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.ActionLink("Edit", "EditUser", "EditUser")
+                    </td>
+                    <td>@Model.FirstNAme</td>
+                    <td>@Model.LastName</td>
+                    <td>@Model.UserName</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+    
+@*<div>
+        <script>
+            function myFunction() {
+                alert("chope chul")
+        @Html.Action("EditUser","EditUser")
+       }
+    </script>*@
+@*</div>*@
+
